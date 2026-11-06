@@ -13,6 +13,11 @@ jobs:
   autofix:
     runs-on: ubuntu-latest
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@46b06cea07f9e64621fdf066ba77ac6915163d43 # v2.22.3
+        with:
+          egress-policy: audit
+
       - uses: mhils/workflows/checkout@589b2878317d2d57c315c5825f9a1cfe9c76a7c3
       - uses: mhils/workflows/setup-uv@589b2878317d2d57c315c5825f9a1cfe9c76a7c3
 
