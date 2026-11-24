@@ -1,5 +1,5 @@
 # todo: use a more lightweight base, e.g., Alpine Linux
-FROM ubuntu:18.04
+FROM ubuntu:18.04@sha256:152dc042452c496007f07ca9127571cb9c29697f42acbfad72324b2bb2e43c98
 
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
